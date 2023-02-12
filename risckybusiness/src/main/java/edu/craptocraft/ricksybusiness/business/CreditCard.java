@@ -3,8 +3,8 @@ package edu.craptocraft.ricksybusiness.business;
 public class CreditCard {
     private final String owner;
     private final String number;
-    private Double credit;
-    private static final  String SYMBOL = "EZI";
+    private double credit;
+    private static final String SYMBOL = "EZI";
 
     protected CreditCard(String owner, String number) {
         this.owner = owner;
@@ -12,18 +12,32 @@ public class CreditCard {
         this.credit = 3000d;
     }
 
-    public String getOwner() {
+    String getOwner() {
         return this.owner;
     }
 
-    public String getNumber() {
+    String getNumber() {
         return this.number;
     }
 
-    public Double getCredit() {
+    double getCredit() {
         return this.credit;
     }
 
+    boolean pay(double quantityToPay) {
+
+        if (this.getCredit() >= quantityToPay) {
+            this.credit -= quantityToPay;
+            return true;
+        }
+
+        else {
+            return false;
+        }
+
+    }
+
+    @Override
     public String toString() {
         StringBuilder information = new StringBuilder();
 
