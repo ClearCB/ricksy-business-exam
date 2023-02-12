@@ -1,4 +1,4 @@
-package edu.craptocraft.risckybusiness;
+package edu.craptocraft.ricksybusiness;
 
 /**
  * Ricksy Business
@@ -36,11 +36,11 @@ package edu.craptocraft.risckybusiness;
           * el crédito inicial es de 3000 EZIS
           */
  
-         CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
+        //  CreditCard abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
          
-         System.out.println("\n" + "Tarjeta de Abradolph" + "\n" + 
-                                   "===================="        );
-         System.out.println(abradolph);
+        //  System.out.println("\n" + "Tarjeta de Abradolph" + "\n" + 
+        //                            "===================="        );
+        //  System.out.println(abradolph);
  
          /**
           * Construye el componente de reserva de Ovnis.

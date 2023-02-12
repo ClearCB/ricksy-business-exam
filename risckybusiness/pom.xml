@@ -54,7 +54,7 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <mainClass>edu.craptocraft.risckybusiness.RisckyBusiness</mainClass>
+                <mainClass>edu.craptocraft.ricksybusiness.RicksyBusiness</mainClass>
               </manifest>
               <manifestEntries>
                 <url>${project.url}</url>
