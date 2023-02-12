@@ -33,7 +33,7 @@ public class RicksyBusiness {
 
         /**
          * Crea una tarjeta de crédito para Abradolph.
-         * Como es una AndromedanExpress
+         * Como es una AndromedanExpressS
          * el crédito inicial es de 3000 EZIS
          */
 
@@ -222,27 +222,27 @@ public class RicksyBusiness {
 
         // tu código aquí
 
-        // RickMenuDispatcher MenuDispatcher = new RickMenuDispatcher();
+        RickMenuDispatcher menuDispatcher = new RickMenuDispatcher();
 
-        // receptivo.registra(MenuDispatcher);
+        receptivo.registre(menuDispatcher);
 
-        // CreditCard[] cards = {abradolph, squanchy, morty, gearHead, birdpearson};
+        CreditCard[] cards = {abradolph, squanchy, morty, gearHead, birdpearson};
 
-        // for (CreditCard card: cards) {
-        //     receptivo.dispatch(card);
-        // }
+        for (CreditCard card: cards) {
+            receptivo.dispatch(card);
+        }
 
-        // System.out.println("\nPedidos de RickMenus:\n" + 
-        //                      "=====================");
-        // System.out.println(MenuDispatcher);
+        System.out.println("\nPedidos de RickMenus:\n" + 
+                             "=====================");
+        System.out.println(menuDispatcher);
 
-        // System.out.println("\nCreditos de los invitados/as:\n" + 
-        //                      "=============================");
+        System.out.println("\nCreditos de los invitados/as:\n" + 
+                             "=============================");
 
-        // for (CreditCard card: cards) {
-        //     System.out.println(card);
-        //     System.out.println();
-        // }
+        for (CreditCard card: cards) {
+            System.out.println(card);
+            System.out.println();
+        }
     }
 
     private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {
