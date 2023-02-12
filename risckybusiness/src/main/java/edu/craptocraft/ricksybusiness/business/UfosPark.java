@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Map.Entry;
+import java.util.function.UnaryOperator;
 
 public class UfosPark implements GuestDispatcher {
     private double fee = 500d;
@@ -39,12 +40,29 @@ public class UfosPark implements GuestDispatcher {
     }
 
     public String getUfoOf(String cardNumber) {
+        String ufo = "Not ufo free";
 
-        Optional<Entry<String, String>> ufo = this.flota.entrySet().stream()
-                             .filter(entry -> entry.getValue().equals(cardNumber))
-                             .findFirst();
-        
-        return ufo.isPresent()? ufo.get().getKey() : null;
+        if (this.flota.containsValue(cardNumber)) {
+            Optional<Entry<String, String>> ufoOptional = this.flota.entrySet().stream()
+                    .filter(entry -> entry.getValue().equals(cardNumber))
+                    .findFirst();
+            ufo = (ufoOptional.isPresent() ? ufoOptional.get().getKey() : null);
+        }
+        return ufo;
+
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder information = new StringBuilder();
+        information.append("Our ufos are: ");
+
+        for (Map.Entry<String, String> ufo : this.flota.entrySet()) {
+
+            information.append("\nThe ufo: " + ufo.getKey() + "\thas a client with card: " + ufo.getValue() );
+        }
+
+        return information.toString();
 
     }
 }
